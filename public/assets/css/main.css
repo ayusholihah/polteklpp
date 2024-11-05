@@ -1263,7 +1263,7 @@ section,
 .services .service-item {
   padding: 80px 20px;
   margin-top: 0;
-  background: #043759; /* Warna latar belakang biru */
+  background: #043757; /* Warna latar belakang biru */
   max-height: 600px; /* Batasi tinggi untuk memastikan hanya 2 baris tampil */
   overflow: hidden; /* Sembunyikan elemen yang melebihi batas tinggi */
 }
@@ -1745,6 +1745,207 @@ section,
     margin: 0 auto 30px auto;
   }
 }
+
+
+/*--------------------------------------------------------------
+# unit Section
+--------------------------------------------------------------*/
+.unit-title {
+  padding-bottom: 20px;
+
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.unit-title:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 160px;
+  height: 1px;
+  background: color-mix(in srgb, var(--default-color), transparent 60%);
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  margin: auto;
+}
+
+.unit-title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-description {
+  font-size: 16px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  text-align: justify;
+}
+
+.photo-frame {
+  padding: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.content-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.content-title i {
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+.visimisi {
+  font-size: 16px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  text-align: justify;
+  margin-top: 8px;
+}
+
+
+/*--------------------------------------------------------------
+# prodi Section
+--------------------------------------------------------------*/
+.prodi-title {
+  padding-bottom: 20px;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.prodi-img {
+  border: #df1529 1px; 
+  
+  height: 480px;
+  width: 672px;
+  object-fit: cover; /* atau "contain", tergantung kebutuhan */
+}
+
+.sub-title{
+  font-weight: bold;
+}
+
+.bubble-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Gaya bubble */
+.bubble {
+  background-color: #a8a7ab;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+/* Efek hover untuk bubble */
+.bubble:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.h2-sub-title{
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.prodi-box {
+  margin-top: 50px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.visimisi-prodi {
+  position: relative;
+  background-color: var(--surface-color);
+  box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid var(--background-color);
+  padding: 40px;
+  padding-top: 50px; /* Ruang tambahan untuk heading */
+  border-radius: 5px;
+  height: 100%;
+}
+
+/* Gaya untuk judul bubble */
+.visimisi-prodi h3 {
+  position: absolute;
+  top: -20px; /* Menempatkan judul di atas kontainer */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--heading-color);
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap; /* Pastikan teks tetap dalam satu baris */
+}
+
+/* Media query untuk tablet */
+@media (max-width: 768px) {
+  .visimisi-prodi {
+    padding: 30px 20px; /* Kurangi padding untuk tablet */
+    padding-top: 60px; /* Beri ruang lebih untuk heading */
+  }
+  
+  .visimisi-prodi h3 {
+    padding: 10px 60px; /* Perlebar bubble heading */
+    font-size: 20px; /* Sesuaikan ukuran font */
+  }
+}
+
+/* Media query untuk mobile */
+@media (max-width: 480px) {
+  .visimisi-prodi {
+    padding: 20px 15px; /* Kurangi padding untuk layar kecil */
+    padding-top: 70px; /* Ruang tambahan untuk heading */
+  }
+
+  .visimisi-prodi h3 {
+    padding: 10px 80px; /* Lebarkan bubble agar tetap muat dalam satu baris */
+    font-size: 18px; /* Ukuran font lebih kecil */
+  }
+}
+
+
+.visimisi-prodi p {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.visimisi-prodi span, li {
+  text-align: justify;
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
 
 /*--------------------------------------------------------------
 # Testimonials Section

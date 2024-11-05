@@ -73,8 +73,8 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Program Studi</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Pengelolaan Perkebunan</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Budidaya Tanaman Perkebunan</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/ppn">Pengelolaan Perkebunan</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/btp">Budidaya Tanaman Perkebunan</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Akuntansi</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Teknologi Rekayasa Mesin Industri Perkebunan</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Teknologi Rekayasa Kimia Industri</a></li>

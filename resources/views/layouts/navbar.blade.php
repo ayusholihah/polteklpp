@@ -14,26 +14,26 @@
             <li><a href="/profile">Profile</a></li>
             <li class="dropdown"><a href="#"><span>Unit</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="#">BAA</a></li>
-                <li><a href="#">BAU</a></li>
-                <li><a href="#">CDC</a></li>
-                <li><a href="#">UPPM</a></li>
-                <li><a href="#">LSP</a></li>
+                <li><a href="/baa">BAA</a></li>
+                <li><a href="/bau">BAU</a></li>
+                <li><a href="https://karir.polteklpp.ac.id/">CDC</a></li>
+                <li><a href="/uppm">UPPM</a></li>
+                <li><a href="https://lsp.polteklpp.ac.id/">LSP</a></li>
                 <li><a href="#">Kerjasama</a></li>
-                <li><a href="#">PMB</a></li>
-                <li><a href="#">Kemahasiswaan</a></li>
-                <li><a href="#">UPMPI</a></li>
-                <li><a href="#">Perpustakaan</a></li>             
+                <li><a href="https://pmb.polteklpp.ac.id/">PMB</a></li>
+                <li><a href="http://103.129.174.22/ukb">Kemahasiswaan</a></li>
+                <li><a href="http://103.129.174.22/ukb">UPMPI</a></li>
+                <li><a href="http://103.129.174.19/slimslpp/">Perpustakaan</a></li>             
               </ul>
             </li>
             <li class="dropdown"><a href="#"><span>Program Studi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="#">Teknologi Rekayasa Kimia Industri</a></li>
-                <li><a href="#">Teknologi Rekayasa Mesin Industri Perkebunan</a></li>
-                <li><a href="#">Akuntansi</a></li>
-                <li><a href="#">Budidaya Tanaman Perkebunan</a></li>
-                <li><a href="#">Pengelolaan Perkebunan</a></li>
-                <li><a href="#">Perawatan Mesin Pengolah Hasil Perkebunan</a></li>           
+                <li><a href="/d4-trki">Teknologi Rekayasa Kimia Industri</a></li>
+                <li><a href="/d4-trmip">Teknologi Rekayasa Mesin Industri Perkebunan</a></li>
+                <li><a href="/d3-akt">Akuntansi</a></li>
+                <li><a href="/d3-btp">Budidaya Tanaman Perkebunan</a></li>
+                <li><a href="/d4-ppn">Pengelolaan Perkebunan</a></li>
+                <li><a href="/d2-pmphp">Perawatan Mesin Pengolah Hasil Perkebunan</a></li>           
               </ul>
             </li>
             <li><a href="#pricing">Download</a></li>

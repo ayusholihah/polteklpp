@@ -10,7 +10,7 @@
 
             <!-- Header -->
             <div class="section-header text-center mb-5">
-                <h2 class="unit-title">Bagian Administrasi Akademik</h2>
+                <h2 class="unit-title">Kerjasama</h2>
                 <p class="section-description">
                 Bagian Administrasi Akademik Politeknik LPP Yogyakarta mendukung kelancaran proses akademik dengan mengatur jadwal, mengelola data, dan memfasilitasi ujian. Bagian ini juga menyediakan informasi serta layanan administratif bagi mahasiswa, seperti pengisian Kartu Rencana Studi (KRS) dan prosedur lainnya untuk mendukung kemudahan akses layanan akademik.
                 </p>

@@ -10,9 +10,9 @@
 
             <!-- Header -->
             <div class="section-header text-center mb-5">
-                <h2 class="unit-title">Bagian Administrasi Akademik</h2>
+                <h2 class="unit-title">Bagian Administrasi Umum</h2>
                 <p class="section-description">
-                Bagian Administrasi Akademik Politeknik LPP Yogyakarta mendukung kelancaran proses akademik dengan mengatur jadwal, mengelola data, dan memfasilitasi ujian. Bagian ini juga menyediakan informasi serta layanan administratif bagi mahasiswa, seperti pengisian Kartu Rencana Studi (KRS) dan prosedur lainnya untuk mendukung kemudahan akses layanan akademik.
+                Bagian Administrasi Umum di Politeknik LPP Yogyakarta bertanggung jawab atas kelancaran operasional kampus dalam aspek non-akademik. Tugas utamanya meliputi pengelolaan kepegawaian, keuangan, serta perawatan sarana dan prasarana kampus. Bagian ini memastikan fasilitas yang memadai dan lingkungan kampus yang kondusif bagi dosen, pegawai, dan mahasiswa, serta mendukung tata kelola yang efisien dan akuntabel.
                 </p>
                 <p class="section-description">Bagian Administrasi Akademik juga berfungsi sebagai pusat informasi bagi mahasiswa mengenai peraturan akademik, prosedur administrasi, serta layanan terkait lainnya. Bagian ini memberikan bimbingan dalam hal administratif agar mahasiswa dapat memahami dan mematuhi kebijakan akademik yang berlaku di Politeknik LPP.</p>
             </div>

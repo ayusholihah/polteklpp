@@ -223,14 +223,19 @@
   </section><!-- /Services Section -->
 
   <section id="instagram">
+    
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>GALERI INSTAGRAM</h2>
+    </div><!-- End Section Title -->
+    
     <div class="container">
-      <h2>Galeri Instagram</h2>
       <div id="instagram-gallery">
           <!-- Embed code from Elfsight -->
           <!-- <script src="https://static.elfsight.com/platform/platform.js" async></script>
           <div class="elfsight-app-799e2b78-939e-4ac8-8c8e-f2c9c893f4ab" data-elfsight-app-lazy></div> -->
 
-          <!-- LightWidget WIDGET -->
+           <h4><a href="https://www.instagram.com/politekniklpp/">@politekniklpp</a></h4>
            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
            <iframe src="//lightwidget.com/widgets/ed5e5c81a5cb50dc94ca90bbafad3906.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
       </div>
