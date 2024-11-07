@@ -531,6 +531,76 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Category Footer
+--------------------------------------------------------------*/
+
+/* General styling for the sidebar */
+
+.categories .sidebar {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+/* Styling for the category list */
+.categories {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Styling for individual category items */
+.categories li {
+  position: relative;
+}
+
+/* Styling for the folder icon and category name */
+.categories li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Folder icon styling */
+.categories i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+}
+
+/* Indentation for nested categories */
+.categories ul.categories, .categories ul.nested-categories {
+  padding-left: 5px;
+  list-style-type: none;
+}
+
+.categories ul.nested-categories {
+  padding-left: 15px;
+}
+
+@media (max-width: 768px) {
+  .categories h3 {
+      font-size: 1.5rem;
+  }
+  .categories .sidebar, .categories .card {
+      margin-bottom: 20px;
+  }
+}
+
+/* Highlight selected category (optional) */
+.categories li a.active {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Hover effect */
+.categories li a:hover {
+  color: #0056b3;
+}
+
+/*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
@@ -626,6 +696,7 @@ h6 {
 
 .footer .footer-links {
   margin-bottom: 30px;
+  width: auto;
 }
 
 .footer .footer-links ul {

@@ -19,7 +19,7 @@
                 <li><a href="https://karir.polteklpp.ac.id/">CDC</a></li>
                 <li><a href="/uppm">UPPM</a></li>
                 <li><a href="https://lsp.polteklpp.ac.id/">LSP</a></li>
-                <li><a href="#">Kerjasama</a></li>
+                <li><a href="/kerjasama">Kerjasama</a></li>
                 <li><a href="https://pmb.polteklpp.ac.id/">PMB</a></li>
                 <li><a href="http://103.129.174.22/ukb">Kemahasiswaan</a></li>
                 <li><a href="http://103.129.174.22/ukb">UPMPI</a></li>
@@ -36,7 +36,7 @@
                 <li><a href="/d2-pmphp">Perawatan Mesin Pengolah Hasil Perkebunan</a></li>           
               </ul>
             </li>
-            <li><a href="#pricing">Download</a></li>
+            <li><a href="/categories">Download</a></li>
             <li><a href="#team">PKKMB</a></li>
             <li><a href="/contact">Kontak</a></li>
           </ul>
