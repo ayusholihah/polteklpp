@@ -5,18 +5,24 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\File;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        // Only eager load children if files are not needed
         $categories = Category::with('children')->whereNull('parent_id')->get();
-        return view('categories.index', compact('categories'));
+    
+        // Fetch all files if 'all' is clicked, ensure it's a collection
+        $files = collect();
+        if ($request->query('all')) {
+            $files = File::all();  // This is an Eloquent Collection
+        }
+    
+        return view('categories.index', compact('categories', 'files'));
     }
     
-
     public function create()
     {
         // Fetch all categories, might be used for parent selection
@@ -43,16 +49,37 @@ class CategoryController extends Controller
     }
     
 
-    public function show(Category $category)
+    public function show($id)
     {
-        // Load the children and files for the selected category
-        $category->load(['children', 'files']);
-        
-        // Load all categories for the sidebar (top-level categories)
-        $categories = Category::with('children')->whereNull('parent_id')->get();
+        // Ambil kategori beserta subkategori dan file
+        $category = Category::with(['children', 'files', 'parent'])->findOrFail($id);
     
-        // Pass both the categories and the selected category to the view
-        return view('categories.show', compact('category', 'categories'));
+        // Ambil kategori utama (parent-level) untuk navigasi
+        $topCategories = Category::whereNull('parent_id')->get();
+    
+        // Kirim data ke view
+        return view('categories.show', [
+            'category' => $category,
+            'subcategories' => $category->children, // Kirim subkategori
+            'files' => $category->files,           // Kirim file
+            'topCategories' => $topCategories,     // Kirim kategori utama
+        ]);
+    }
+    
+
+    public function showAllFiles()
+    {
+        // Fetch all files associated with any category
+        $files = File::all(); // Assuming `File` is linked to a category
+
+        // Retrieve all top-level categories to display in the sidebar
+        $topCategories = Category::whereNull('parent_id')->with('children')->get();
+
+        // Clear any active/open categories in the session
+        session()->forget(['active_category', 'open_category']);
+
+        // Return the view with the files and categories
+        return view('categories.all', compact('files', 'topCategories'));
     }
     
 }

@@ -1,30 +1,43 @@
-<li>
-    <a href="javascript:void(0);" class="toggle-category">
-        <i class="bi bi-folder-fill"></i> {{ $category->name }}
-    </a>
+<div class="categories">
+    <li class="{{ session('active_category') == $category->id ? 'active' : '' }}">
+        @if ($category->children->isNotEmpty())
+            <!-- Category with Subcategories -->
 
-    @if ($category->children->isNotEmpty())
-        <ul class="nested-categories" style="display: none;">
-            @foreach ($category->children as $child)
-                @include('categories.partials.category', ['category' => $child])
-            @endforeach
-        </ul>
-    @endif
-</li>
+            <!-- Toggle Checkbox -->
+            <input type="checkbox" id="toggle-{{ $category->id }}" class="toggle"
+                   {{ session('open_category') == $category->id ? 'checked' : '' }} />
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const toggleLinks = document.querySelectorAll('.toggle-category');
+            <!-- Label for Toggle Icon (Folder Icon + Arrow Icon for Categories with Children) -->
+            <label for="toggle-{{ $category->id }}" class="category-toggle">
+                <span>
+                <i class="bi bi-chevron-down arrow {{ session('open_category') == $category->id ? 'rotate' : '' }}"></i>
+                <!-- Arrow Icon for Expandable Categories -->
+                    <i class="bi bi-folder-fill"></i> <!-- Folder Icon -->
+                </span>
+            </label>
 
-        toggleLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                const nestedCategories = this.nextElementSibling;
+            <!-- Category Link -->
+            <a href="{{ route('categories.show', $category->id) }}" class="category-label">
+                {{ $category->name }}
+            </a>
 
-                if (nestedCategories) {
-                    // Toggle display style between 'none' and 'block'
-                    nestedCategories.style.display = nestedCategories.style.display === "none" ? "block" : "none";
-                }
-            });
-        });
-    });
-</script>
+            <!-- Nested Categories -->
+            <ul class="nested-categories {{ session('open_category') == $category->id ? 'show' : '' }}">
+                @foreach ($category->children as $child)
+                    @include('categories.partials.category', ['category' => $child])
+                @endforeach
+            </ul>
+
+        @else
+            <!-- Category without Subcategories -->
+            <label class="category-toggle">
+                <span>
+                    <i class="bi bi-folder-fill"></i> <!-- Folder Icon -->
+                </span>
+            </label>
+            <a href="{{ route('categories.show', $category->id) }}" class="category-label">
+                {{ $category->name }}
+            </a>
+        @endif
+    </li>
+</div>

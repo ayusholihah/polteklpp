@@ -57,6 +57,9 @@ Route::get('d4-trki', function () {
 Route::get('d4-trmip', function () {
     return view('prodi.d4-trmip');
 });
+Route::get('pkkmb', function () {
+    return view('pkkmb.pkkmb');
+});
 
 // Route for downloading a specific file
 Route::get('/files/download/{id}', [FileController::class, 'download'])->name('files.download');

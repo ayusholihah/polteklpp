@@ -37,7 +37,7 @@
               </ul>
             </li>
             <li><a href="/categories">Download</a></li>
-            <li><a href="#team">PKKMB</a></li>
+            <li><a href="/pkkmb">PKKMB</a></li>
             <li><a href="/contact">Kontak</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

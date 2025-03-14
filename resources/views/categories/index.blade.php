@@ -4,50 +4,64 @@
 <br><br><br><br><br>
 <div class="categories">
     <div class="container">
+        <h3>File Kategori</h3>
         <!-- Create Category Button -->
-        <a href="{{ route('categories.create') }}" class="btn btn-success mb-3">Add New Category</a>
+        <a href="{{ route('categories.create') }}" class="btn btn-success">Add New Category</a>
         
         <!-- Create File Button -->
-        <a href="{{ route('files.create') }}" class="btn btn-primary mb-3">Upload New File</a>
-    
-        <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-folder-open"></i>
-                    <span>Data Barang</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ route('barang.index')}}">Barang</a>
-                        <a class="collapse-item" href="{{ route('kategori.index')}}">Kategori</a>
-                    </div>
+        <a href="{{ route('files.create') }}" class="btn btn-primary">Upload New File</a>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <ul class="categories">
+                        <!-- "All Categories" -->
+                        <li>
+                            <input type="checkbox" id="toggle-all-categories" class="toggle" 
+                                {{ request('all') ? 'checked' : '' }} />
+                            <label for="toggle-all-categories" class="category-toggle">
+                                <span>
+                                    <i class="bi bi-chevron-down arrow"></i> <!-- Arrow for toggling -->
+                                    <i class="bi bi-folder-fill"></i> <!-- Folder Icon -->
+                                </span>
+                            </label>
+                            <a href="{{ route('categories.index', ['all' => true]) }}" class="category-label">
+                                All Categories
+                            </a>
+        
+                            <!-- Nested Categories -->
+                            <ul class="nested-categories">
+                                @foreach ($categories as $category)
+                                    @include('categories.partials.category', ['category' => $category])
+                                @endforeach
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-            </li>
-
-
-            <hr class="sidebar-divider my-0">
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-exchange-alt"></i>
-                    <span>Data Transaksi</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ route('barangmasuk.index')}}">Barang Masuk</a>
-                        <a class="collapse-item" href="{{ route('barangkeluar.index')}}">Barang Keluar</a>
+            </div>
+            <div class="col-md-9 col-categories">
+                @if ($files->isNotEmpty())
+                    <div class="row">
+                        @foreach ($files as $file)
+                            <div class="col-md-6 mb-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $file->name }}</h5>
+                                        <p>Type: {{ strtoupper(pathinfo($file->name, PATHINFO_EXTENSION)) }} | Size: {{ number_format($file->size / 1024, 2) }} KB</p>
+                                        <p><strong>Hits:</strong> {{ $file->hits }}</p>
+                                        <p><strong>Date added:</strong> {{ $file->date_added }}</p>
+                                        <p><strong>Date modified:</strong> {{ $file->date_modified }}</p>
+                                        <a href="{{ route('files.download', $file->id) }}" class="btn btn-primary">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
-                </div>
-            </li>
-        <div class="sidebar">
-            <ul class="categories">
-                @foreach ($categories as $category)
-                    @include('categories.partials.category', ['category' => $category])
-                @endforeach
-            </ul>
+                @else
+                    <p>No files available for "All Categories".</p>
+                @endif
+            </div>
+
         </div>
     </div>
 </div>
